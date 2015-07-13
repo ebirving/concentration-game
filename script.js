@@ -1,16 +1,28 @@
 $("document").ready(function () {
-  //As a user, I want to click cards to turn them face-up so I can look for matches.
-  //As a user, I want to turn over two cards per turn so I can see if they match.
-  var clickCount = 0
+
+var clickCount = 0;
+var cardsToCompare = [];
+
   $(".card").on ("click", function () {
     $(this).removeClass("back");
+    $(this).addClass("front");
+    cardsToCompare.push(document.getElementsByClassName("front")[clickCount].children[0].id);
     clickCount++;
-    console.log(clickCount);
+    console.log(cardsToCompare)
     if(clickCount == 2) {
-      setTimeout(function(){
-        $(".card").addClass("back");
-      }, 3000)
-    clickCount = 0;
+      cardsAsString = cardsToCompare.toString()
+      console.log(cardsAsString);
+      if(cardsAsString.substring(0,1) !== cardsAsString.substring(3,4)) {
+        setTimeout(function(){
+          $(".card").addClass("back");
+          }, 3000)
+          clickCount = 0;
+        }
+      else {
+        $(".front").on("click", function(){return false;})
+      }
+      cardsToCompare = [];
     }
   })
+
 })
