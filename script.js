@@ -9,7 +9,7 @@ $("document").ready(function () {
       if($(".guessed img").eq(0).attr("src") !== $(".guessed img").eq(1).attr("src")) {
         setTimeout(function(){
           $(".guessed").addClass("back").removeClass("front guessed");
-        }, 2000)
+        }, 1000)
           //clickCount = 0;
       }
       else if ($(".guessed span").eq(0).html() === $(".guessed span").eq(1).html()){

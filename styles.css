@@ -4,37 +4,15 @@
 
 body {
   background-image: url("starry_sky.jpg");
+  background-color: black;
   background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   font-family: 'Bangers', cursive;
 }
 
-h1 {
-  font-size: 4em;
-  margin-bottom: 0em;
-  color: #FFC600;
-}
-
-#board {
-  width: 32em;
-  height: 32em;
+main {
   position: relative;
-  color: #001D38;
-}
-
-#new_game {
-  color: #00173C;
-  width: 20%;
-  font-size: 1.4em;
-  border-radius: .7em;
-  background-color: #F7FDF9;
-  font-family: 'Bangers', cursive;
-}
-
-#tagline {
-  font-size: 2em;
-  font-family: 'Bangers', cursive;
-  color: #FFC600;
 }
 
 footer {
@@ -43,6 +21,20 @@ footer {
   margin-top: 2em;
   color: #F7FDF9;
 }
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 0em;
+  color: #FFC600;
+}
+
+img {
+  position: absolute;
+  height: 85%;
+  top: 15%;
+  right: 12%;
+}
+
 
 a {
   color: #F7FDF9;
@@ -101,17 +93,31 @@ a {
   left: 23.5em;
 }
 
-img {
-  position: absolute;
-  height: 85%;
-  top: 15%;
-  right: 12%;
-}
-
 [alt^="Constellation"] {
   right: 7%;
 }
 
 [alt^="Spacesuit"] {
   right: 22%;
+}
+
+#board {
+  width: 32em;
+  height: 32em;
+  color: #001D38;
+}
+
+#new_game {
+  color: #00173C;
+  width: 20%;
+  font-size: 1.4em;
+  border-radius: .7em;
+  background-color: #F7FDF9;
+  font-family: 'Bangers', cursive;
+}
+
+#tagline {
+  font-size: 2em;
+  font-family: 'Bangers', cursive;
+  color: #FFC600;
 }
