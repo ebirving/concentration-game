@@ -25,7 +25,7 @@ footer {
 h1 {
   font-size: 4em;
   margin-bottom: 0em;
-  color: #FFC600;
+  color: #52ff00;
 }
 
 img {
@@ -49,7 +49,7 @@ a {
 }
 
 .back {
-  background-color: #084359;
+  background-color: #00173C;
 }
 
 .back img {
@@ -104,7 +104,6 @@ a {
 #board {
   width: 32em;
   height: 32em;
-  color: #001D38;
 }
 
 #new_game {
@@ -119,5 +118,5 @@ a {
 #tagline {
   font-size: 2em;
   font-family: 'Bangers', cursive;
-  color: #FFC600;
+  color: #52ff00;
 }
