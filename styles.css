@@ -7,17 +7,17 @@ body {
   background-size: cover;
   text-align: center;
   font-family: 'Bangers', cursive;
-  color: #FFC600;
 }
 
 h1 {
-  font-size: 6em;
+  font-size: 4em;
   margin-bottom: 0em;
+  color: #FFC600;
 }
 
 #board {
-  width: 50%;
-  height: 45em;
+  width: 32em;
+  height: 32em;
   position: relative;
   color: #001D38;
 }
@@ -25,21 +25,22 @@ h1 {
 #new_game {
   color: #00173C;
   width: 20%;
-  font-size: 1.5em;
-  border-radius: 1em;
+  font-size: 1.4em;
+  border-radius: .7em;
   background-color: #F7FDF9;
   font-family: 'Bangers', cursive;
 }
 
-h2 {
+#tagline {
   font-size: 2em;
-  margin-bottom: 2em;
+  font-family: 'Bangers', cursive;
+  color: #FFC600;
 }
 
 footer {
   font-family: 'Roboto', sans-serif;
   font-size: .7em;
-  margin-top: 5em;
+  margin-top: 2em;
   color: #F7FDF9;
 }
 
@@ -48,8 +49,8 @@ a {
 }
 
 .card {
-  width: 165px;
-  height: 165px;
+  width: 7em;
+  height: 7em;
   position: absolute;
   border: solid black .1em;
   border-radius: 1em;
@@ -69,35 +70,35 @@ a {
 }
 
 .top {
-  top: 10px;
+  top: 1em;
 }
 
 .second_row {
-  top: 185px;
+  top: 8.5em;
 }
 
 .third_row {
-  top: 360px;
+  top: 16em;
 }
 
 .bottom {
-  top: 535px;
+  top: 23.5em;
 }
 
 .left {
- left: 10px;
+ left: 1em;
 }
 
 .second_column {
-  left: 185px
+  left: 8.5em
 }
 
 .third_column {
-  left: 360px
+  left: 16em
 }
 
 .right {
-  left: 535px;
+  left: 23.5em;
 }
 
 img {
