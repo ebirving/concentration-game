@@ -16,7 +16,11 @@ h2 {
   font-size: 42px;
 }
 
-footer {
+span {
+  font-size: 135px;
+}
+
+p {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -45,6 +49,7 @@ footer {
 .back span {
   visibility: hidden;
 }
+
 
 .top {
   top: 10px;
