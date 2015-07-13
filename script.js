@@ -3,17 +3,17 @@ $("document").ready(function () {
   var clickCount = 0;
 
   $(".card").on ("click", function () {
-    $(this).removeClass("back").addClass("front active");
+    $(this).removeClass("back").addClass("front guessed");
     clickCount++;
     if(clickCount == 2) {
-      if($(".active span").eq(0).html() !== $(".active span").eq(1).html()) {
+      if($(".guessed span").eq(0).html() !== $(".guessed span").eq(1).html()) {
         setTimeout(function(){
-          $(".active").addClass("back").removeClass("front active");
+          $(".guessed").addClass("back").removeClass("front guessed");
         }, 2000)
           //clickCount = 0;
       }
-      else if ($(".active span").eq(0).html() === $(".active span").eq(1).html()){
-        $(".front").on("click", function(){return false;}).removeClass("active");
+      else if ($(".guessed span").eq(0).html() === $(".guessed span").eq(1).html()){
+        $(".guessed").removeClass("guessed");
         //clickCount = 0;
       }
       clickCount = 0;
@@ -26,5 +26,5 @@ $("document").ready(function () {
 
 
 
-
+//need to solve problem of double clicking while face up
 })

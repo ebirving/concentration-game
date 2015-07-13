@@ -50,6 +50,9 @@ p {
   visibility: hidden;
 }
 
+.front {
+  pointer-events: none;
+}
 .top {
   top: 10px;
 }
