@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 5px;
+}
+
+h2 {
+
+}
+
+footer {
+  text-align: center;
+}
+
+#board {
+  width: 740px;
+  height: 740px;
+  position: relative;
+  margin: 0 auto;
+  border: solid black 15px;
+}
+
+.card {
+  width: 165px;
+  height: 165px;
+  position: absolute;
+  border: solid black 2px;
+  border-radius: 15px;
+}
+
+.top {
+  top: 10px;
+}
+
+.second_row {
+  top: 185px;
+}
+
+.third_row {
+  top: 360px;
+}
+
+.bottom {
+  top:535px;
+}
+
+.left {
+ left: 10px;
+}
+
+.second_column {
+  left:185px
+}
+
+.third_column {
+  left:360px
+}
+
+.right {
+  left: 535px;
+}
