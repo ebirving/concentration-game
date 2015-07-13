@@ -20,6 +20,9 @@ $("document").ready(function () {
    }
   })
 
+$("#new_game").on ("click", function () {
+  $(".card").addClass("back").removeClass("front guessed")
+})
 
 
 

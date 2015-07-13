@@ -3,30 +3,43 @@
 }
 
 body {
-  text-align: center;
-  font-family: 'Bangers', cursive;
   background-image: url("starry_sky.jpg");
   background-size: cover;
+  text-align: center;
+  font-family: 'Bangers', cursive;
   color: #FFC600;
 }
 
 h1 {
-  font-size: 96px;
-  line-height: 7px;
+  font-size: 6em;
+  margin-bottom: 0em;
+}
+
+#board {
+  width: 50%;
+  height: 45em;
+  position: relative;
+  color: #001D38;
+}
+
+#new_game {
+  color: #00173C;
+  width: 20%;
+  font-size: 1.5em;
+  border-radius: 1em;
+  background-color: #F7FDF9;
+  font-family: 'Bangers', cursive;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 2em;
+  margin-bottom: 2em;
 }
 
-span {
-  font-size: 135px;
-}
-
-p {
+footer {
   font-family: 'Roboto', sans-serif;
-  font-size: 10px;
-  margin-top: 100px;
+  font-size: .7em;
+  margin-top: 5em;
   color: #F7FDF9;
 }
 
@@ -34,88 +47,12 @@ a {
   color: #F7FDF9;
 }
 
-[id^="a"] {
-  height: 160px;
-  position: absolute;
-  top: 15px;
-  right: 12px;
-}
-
-[id^="b"] {
-  height: 140px;
-  position: absolute;
-  top: 25px;
-  right: 15px;
-}
-
-[id^="c"] {
-  height: 140px;
-  position: absolute;
-  top: 25px;
-  right: 5px;
-}
-
-[id^="d"] {
-  height: 160px;
-  position: absolute;
-  top: 20px;
-  right: 25px;
-}
-
-[id^="e"] {
-  height: 160px;
-  position: absolute;
-  top: 20px;
-  right: 15px;
-}
-
-[id^="f"] {
-  height: 130px;
-  position: absolute;
-  top: 25px;
-  right: 20px;
-}
-
-[id^="g"] {
-  height: 150px;
-  position: absolute;
-  top: 25px;
-  right: 15px;
-}
-
-[id^="h"] {
-  height: 150px;
-  position: absolute;
-  top: 20px;
-  right: 30px;
-}
-
-#new_game {
-  color: #00173C;
-  width: 150px;
-  height: 50px;
-  font-size: 24px;
-  border-radius: 15px;
-  background-color: white;
-  font-family: 'Bangers', cursive;
-}
-
-#board {
-  width: 740px;
-  height: 740px;
-  position: relative;
-  margin: 0 auto;
-  /*border: solid #797979 15px;*/
-  color: #001D38;
-  font-family: 'Roboto', sans-serif;
-}
-
 .card {
   width: 165px;
   height: 165px;
   position: absolute;
-  border: solid black 2px;
-  border-radius: 15px;
+  border: solid black .1em;
+  border-radius: 1em;
 }
 
 .back {
@@ -130,6 +67,7 @@ a {
   background-color: #F7FDF9;
   pointer-events: none;
 }
+
 .top {
   top: 10px;
 }
@@ -160,4 +98,19 @@ a {
 
 .right {
   left: 535px;
+}
+
+img {
+  position: absolute;
+  height: 85%;
+  top: 15%;
+  right: 12%;
+}
+
+[alt^="Constellation"] {
+  right: 7%;
+}
+
+[alt^="Spacesuit"] {
+  right: 22%;
 }
