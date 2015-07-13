@@ -5,6 +5,9 @@
 body {
   text-align: center;
   font-family: 'Bangers', cursive;
+  background-image: url("starry_sky.jpg");
+  background-size: cover;
+  color: #FFC600;
 }
 
 h1 {
@@ -22,6 +25,78 @@ span {
 
 p {
   font-family: 'Roboto', sans-serif;
+  margin-top: 100px;
+  color: #F7FDF9;
+}
+
+a {
+  color: #F7FDF9;
+}
+
+[id^="a"] {
+  height: 160px;
+  position: absolute;
+  top: 15px;
+  right: 12px;
+}
+
+[id^="b"] {
+  height: 140px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+[id^="c"] {
+  height: 140px;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+}
+
+[id^="d"] {
+  height: 160px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+
+[id^="e"] {
+  height: 160px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+[id^="f"] {
+  height: 130px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+[id^="g"] {
+  height: 150px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+[id^="h"] {
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+#new_game {
+  color: #00173C;
+  width: 150px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 15px;
+  background-color: white;
+  font-family: 'Bangers', cursive;
 }
 
 #board {
@@ -29,8 +104,8 @@ p {
   height: 740px;
   position: relative;
   margin: 0 auto;
-  border: solid black 15px;
-  color: blue;
+  /*border: solid #797979 15px;*/
+  color: #001D38;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -43,14 +118,15 @@ p {
 }
 
 .back {
-  background-color: red;
+  background-color: #084359;
 }
 
-.back span {
+.back img {
   visibility: hidden;
 }
 
 .front {
+  background-color: #F7FDF9;
   pointer-events: none;
 }
 .top {
