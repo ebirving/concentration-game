@@ -1,22 +1,28 @@
 * {
   box-sizing: border-box;
+  text-align: center;
 }
 
 header {
   text-align: center;
+  font-family: 'Bangers', cursive;
 }
 
 h1 {
-  font-size: 60px;
-  line-height: 5px;
+  font-size: 96px;
+  line-height: 7px;
+  text-align: center;
+  font-family: 'Bangers', cursive;
 }
 
 h2 {
-
+  font-size: 42px;
+  text-align: center;
+  font-family: 'Bangers', cursive;
 }
 
 footer {
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 #board {
@@ -33,6 +39,20 @@ footer {
   position: absolute;
   border: solid black 2px;
   border-radius: 15px;
+}
+
+.back {
+  background-color: red;
+}
+
+.back span {
+  visibility: hidden;
+}
+
+.front {
+  background-color: white;
+  color: red;
+  font-family: 'Roboto', sans-serif;
 }
 
 .top {
