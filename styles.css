@@ -6,6 +6,7 @@ body {
   background-image: url("starry_sky.jpg");
   background-color: black;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   font-family: 'Bangers', cursive;
@@ -13,6 +14,7 @@ body {
 
 main {
   position: relative;
+  width: 100%;
 }
 
 footer {
