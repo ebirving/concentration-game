@@ -1,5 +1,3 @@
-// $("document").ready(function () {
-
 var clickCount = 0;
 
 var spaceIcons = [
@@ -22,7 +20,7 @@ var spaceIcons = [
   ]
 
 function shuffleDeck(deck) {
-   for (var i = deck.length - 1; i > 0; i--) {
+   for (var i = deck.length - 1; i >= 0; i--) {
        var j = Math.floor(Math.random() * (i + 1));
        var temp = deck[i];
        deck[i] = deck[j];
@@ -31,9 +29,6 @@ function shuffleDeck(deck) {
        $(".card").eq(i).append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
    }
    return deck;
-   console.log(deck);
-  //  for (var i = deck.length - 1; i > 0)
-  //  $(".card").append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
   }
 
 window.onload = shuffleDeck(spaceIcons)
@@ -60,7 +55,3 @@ $("#new_game").on ("click", function () {
 $(".card").addClass("back").removeClass("front guessed");
 shuffleDeck(spaceIcons);
 })
-
-
-
-// })
