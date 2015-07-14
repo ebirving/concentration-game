@@ -1,5 +1,3 @@
-var clickCount = 0;
-
 var spaceIcons = [
     rocketshipOne = {src: "space_icons/rocketship.svg", alt: "Rocket Ship"},
     rocketshipTwo = {src: "space_icons/rocketship.svg", alt: "Rocket Ship"},
@@ -25,13 +23,14 @@ function shuffleDeck(deck) {
        var temp = deck[i];
        deck[i] = deck[j];
        deck[j] = temp;
-       console.log(i);
        $(".card").eq(i).append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
    }
    return deck;
-  }
+}
 
 window.onload = shuffleDeck(spaceIcons)
+
+var clickCount = 0;
 
 $(".card").on ("click", function () {
   $(this).removeClass("back").addClass("front guessed");
@@ -41,11 +40,9 @@ $(".card").on ("click", function () {
       setTimeout(function(){
         $(".guessed").addClass("back").removeClass("front guessed");
       }, 1000)
-        //clickCount = 0;
     }
     else if ($(".guessed span").eq(0).html() === $(".guessed span").eq(1).html()){
       $(".guessed").removeClass("guessed");
-      //clickCount = 0;
     }
     clickCount = 0;
  }

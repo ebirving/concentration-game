@@ -3,45 +3,35 @@
 }
 
 body {
-  background-image: url("starry_sky.jpg");
-  background-color: #52ff00;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   text-align: center;
   font-family: 'Bangers', cursive;
+  color: #52ff00;
+  background-image: url("starry_sky.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #00173C;
+}
+
+#title {
+  /*border:1px solid red;*/
+  font-size: 2em;
 }
 
 .main {
   position: relative;
+  height: 36em;
+  /*border: 1px solid blue;*/
+  padding-top: .4em;
 }
 
 #board {
-  position: absolute;
   width: 32em;
-  /*height: 32em;*/
-}
-
-#new_game {
-  color: #00173C;
-  width: 20%;
-  font-size: 1.4em;
-  border-radius: .7em;
-  background-color: #F7FDF9;
-  font-family: 'Bangers', cursive;
-}
-
-footer {
-  font-family: 'Roboto', sans-serif;
-  font-size: .7em;
-  color: #F7FDF9;
-}
-
-# {
-  font-size: 2em;
-  margin-bottom: 0em;
-  color: #52ff00;
-  width: 100%;
+  height: 32em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /*border: 1px solid green;*/
 }
 
 img {
@@ -51,9 +41,12 @@ img {
   right: 12%;
 }
 
+[alt^="Constellation"] {
+  right: 7%;
+}
 
-a {
-  color: #F7FDF9;
+[alt^="Spacesuit"] {
+  right: 22%;
 }
 
 .card {
@@ -62,19 +55,6 @@ a {
   position: absolute;
   border: solid black .1em;
   border-radius: 1em;
-}
-
-.back {
-  background-color: #00173C;
-}
-
-.back img {
-  visibility: hidden;
-}
-
-.front {
-  background-color: #F7FDF9;
-  pointer-events: none;
 }
 
 .top {
@@ -97,11 +77,11 @@ a {
  left: 1em;
 }
 
-.second_column {
+.second_col {
   left: 8.5em
 }
 
-.third_column {
+.third_col {
   left: 16em
 }
 
@@ -109,10 +89,50 @@ a {
   left: 23.5em;
 }
 
-[src^="constellation"] {
-  right: 7%;
+.back {
+  background-color: #00173C;
 }
 
-[src^="spacesuit"] {
-  right: 22%;
+.back img {
+  visibility: hidden;
 }
+
+.front {
+  background-color: #F7FDF9;
+  pointer-events: none; /*FIX*/
+}
+
+#buttons {
+  width: 100%;
+  height: 3em;
+  position: absolute;
+  bottom: 0;
+  /*border: 1px solid black;*/
+  padding: .4em;
+}
+
+#new_game {
+  color: #00173C;
+  width: 20%;
+  font-size: 1.4em;
+  border-radius: .7em;
+  font-family: 'Bangers', cursive;
+  background-color: #F7FDF9;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: .7em;
+    color: #F7FDF9;
+    margin-top: 9em;
+  }
+
+footer a {
+    color: #F7FDF9;
+  }
+
+#tagline {
+    font-size: 2em;
+    font-family: 'Bangers', cursive;
+    color: #52ff00;
+  }
