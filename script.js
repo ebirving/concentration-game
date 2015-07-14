@@ -27,10 +27,13 @@ function shuffleDeck(deck) {
        var temp = deck[i];
        deck[i] = deck[j];
        deck[j] = temp;
+       $(".card").eq(i).append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
    }
-   //return deck;
+   return deck;
    console.log(deck);
- }
+  //  for (var i = deck.length - 1; i > 0)
+  //  $(".card").append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
+  }
 
 window.onload = shuffleDeck(spaceIcons)
 
