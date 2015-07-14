@@ -55,6 +55,7 @@ img {
   position: absolute;
   border: solid black .1em;
   border-radius: 1em;
+  box-shadow: .1em .1em .1em white;
 }
 
 .top {
@@ -103,6 +104,7 @@ img {
 
 .front {
   background-color: #F7FDF9;
+  border: solid gray .1em;
   /*pointer-events: none;*/
 }
 
