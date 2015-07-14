@@ -5,8 +5,8 @@ var clickCount = 0;
 var spaceIcons = [
     rocketshipOne = {src: "space_icons/rocketship.svg", alt: "Rocket Ship"},
     rocketshipTwo = {src: "space_icons/rocketship.svg", alt: "Rocket Ship"},
-    ringedPlanetOne = {src: "space_icons/rocketship.svg", alt: "Ringed Planet"},
-    ringedPlanetTwo = {src: "space_icons/rocketship.svg", alt: "Ringed Planet"},
+    ringedPlanetOne = {src: "space_icons/ringed_planet.svg", alt: "Ringed Planet"},
+    ringedPlanetTwo = {src: "space_icons/ringed_planet.svg", alt: "Ringed Planet"},
     constellationOne = {src: "space_icons/constellation.svg", alt: "Constellation"},
     constellationTwo = {src: "space_icons/constellation.svg", alt: "Constellation"},
     spacesuitOne = {src: "space_icons/spacesuit.svg", alt: "Spacesuit"},
@@ -27,6 +27,7 @@ function shuffleDeck(deck) {
        var temp = deck[i];
        deck[i] = deck[j];
        deck[j] = temp;
+       console.log(i);
        $(".card").eq(i).append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
    }
    return deck;
