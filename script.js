@@ -22,7 +22,6 @@ function resetGame() {
   $(".card").addClass("back").removeClass("front guessed");
   $(".card img").remove();
   shuffleDeck(spaceIcons);
-  console.log("The First Card is: " + spaceIcons[0].alt);
 }
 
 function shuffleDeck(deck) {
@@ -36,26 +35,27 @@ function shuffleDeck(deck) {
 }
 
 function flipCard() {
-  $(this).removeClass("back").addClass("front guessed");
+  flippedCard = $(this);
+  flippedCard.removeClass("back").addClass("front guessed").off("click", flipCard);
   clickCount++;
+  console.log(clickCount);
   if(clickCount === 2) {
+    $(".card").off("click", flipCard);
     compareCards();
     clickCount = 0;
+    setTimeout(function (){
+      $(".back").on("click", flipCard);
+    }, 1000);
   }
 }
 
 function compareCards() {
-  console.log("comparing")
   var guessOne = $(".guessed img").eq(0).attr("src");
-  console.log(guessOne)
   var guessTwo = $(".guessed img").eq(1).attr("src");
-  console.log(guessTwo)
   if (guessOne === guessTwo) {
-    console.log("match")
     $(".guessed").removeClass("guessed");
   }
   else if (guessOne !== guessTwo) {
-    console.log("no match")
     setTimeout(function () {
     $(".guessed").addClass("back").removeClass("front guessed")}, 1000)
   }

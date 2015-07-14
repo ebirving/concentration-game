@@ -103,7 +103,7 @@ img {
 
 .front {
   background-color: #F7FDF9;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 #buttons {
@@ -122,6 +122,10 @@ img {
   border-radius: .7em;
   font-family: 'Bangers', cursive;
   background-color: #F7FDF9;
+}
+
+#new_game:hover {
+  background-color: #A8AAA8;
 }
 
 footer {
