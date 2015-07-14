@@ -34,6 +34,21 @@ body {
   /*border: 1px solid green;*/
 }
 
+img {
+  position: absolute;
+  height: 85%;
+  top: 15%;
+  right: 12%;
+}
+
+[src^="constellation"] {
+  right: 7%;
+}
+
+[src^="spacesuit"] {
+  right: 22%;
+}
+
 .card {
   width: 7em;
   height: 7em;

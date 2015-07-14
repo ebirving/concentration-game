@@ -109,10 +109,10 @@ a {
   left: 23.5em;
 }
 
-[alt^="Constellation"] {
+[src^="constellation"] {
   right: 7%;
 }
 
-[alt^="Spacesuit"] {
+[src^="spacesuit"] {
   right: 22%;
 }
