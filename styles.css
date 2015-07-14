@@ -93,13 +93,17 @@ img {
   background-color: #00173C;
 }
 
+.back:hover {
+  background-color: #001F59;
+}
+
 .back img {
   visibility: hidden;
 }
 
 .front {
   background-color: #F7FDF9;
-  pointer-events: none; /*FIX*/
+  pointer-events: none;
 }
 
 #buttons {

@@ -16,39 +16,51 @@ var spaceIcons = [
     telescopeOne = {src: "space_icons/telescope.svg", alt: "Telescope"},
     telescopeTwo = {src: "space_icons/telescope.svg", alt: "Telescope"},
   ]
-
-function shuffleDeck(deck) {
-   for (var i = deck.length - 1; i >= 0; i--) {
-       var j = Math.floor(Math.random() * (i + 1));
-       var temp = deck[i];
-       deck[i] = deck[j];
-       deck[j] = temp;
-       $(".card").eq(i).append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
-   }
-   return deck;
-}
-
-window.onload = shuffleDeck(spaceIcons)
-
 var clickCount = 0;
 
-$(".card").on ("click", function () {
+function resetGame() {
+  $(".card").addClass("back").removeClass("front guessed");
+  $(".card img").remove();
+  shuffleDeck(spaceIcons);
+  console.log("The First Card is: " + spaceIcons[0].alt);
+}
+
+function shuffleDeck(deck) {
+  for (var i = deck.length - 1; i >= 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = deck[i];
+    deck[i] = deck[j];
+    deck[j] = temp;
+    $(".card").eq(i).append("<img src=" + deck[i].src + " alt=" + deck[i].alt + ">")
+  }
+}
+
+function flipCard() {
   $(this).removeClass("back").addClass("front guessed");
   clickCount++;
-  if(clickCount == 2) {
-    if($(".guessed img").eq(0).attr("src") !== $(".guessed img").eq(1).attr("src")) {
-      setTimeout(function(){
-        $(".guessed").addClass("back").removeClass("front guessed");
-      }, 1000)
-    }
-    else if ($(".guessed span").eq(0).html() === $(".guessed span").eq(1).html()){
-      $(".guessed").removeClass("guessed");
-    }
+  if(clickCount === 2) {
+    compareCards();
     clickCount = 0;
- }
-})
+  }
+}
 
-$("#new_game").on ("click", function () {
-$(".card").addClass("back").removeClass("front guessed");
-shuffleDeck(spaceIcons);
-})
+function compareCards() {
+  console.log("comparing")
+  var guessOne = $(".guessed img").eq(0).attr("src");
+  console.log(guessOne)
+  var guessTwo = $(".guessed img").eq(1).attr("src");
+  console.log(guessTwo)
+  if (guessOne === guessTwo) {
+    console.log("match")
+    $(".guessed").removeClass("guessed");
+  }
+  else if (guessOne !== guessTwo) {
+    console.log("no match")
+    setTimeout(function () {
+    $(".guessed").addClass("back").removeClass("front guessed")}, 1000)
+  }
+}
+
+$(window).on("load", resetGame)
+$("#new_game").on("click", resetGame)
+$(".back").on("click", flipCard)
