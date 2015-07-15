@@ -28,6 +28,7 @@ function resetGame() {
   //The images are cleared and reshuffled
   $(".card img").remove();
   shuffleDeck(spaceIcons);
+  $(".back").on("click", flipCard);
 }
 
 //The shuffle function iterates over the deck (for now just spaceIcons) with the same objects in a new order, and then appends one to each card
