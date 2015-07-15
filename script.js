@@ -45,16 +45,14 @@ function shuffleDeck(deck) {
 
 //When the user clicks the back of a card...
 function flipCard() {
-  //The card's front is shown, it is given the class "guessed", and the counter advances ERICA: strike line 49 and last method of line 50?
-  flippedCard = $(this);
-  flippedCard.removeClass("back").addClass("front guessed").off("click", flipCard);
+  //The card's front is shown, it is given the class "guessed", and the counter advances. The event listener on just that card is turned off.
+  $(this).removeClass("back").addClass("front guessed").off("click", flipCard);
   clickCount++;
-  console.log(clickCount);
+  //console.log(clickCount);
   //Once two cards have been flipped, everything is made unclickable for 1s while the compareCards function runs, to avoid comparing more than two cards at a time
   if(clickCount === 2) {
     $(".card").off("click", flipCard);
     compareCards();
-    clickCount = 0; //ERICA: Move to end of compareCards?
     setTimeout(function (){
       $(".back").on("click", flipCard)}, 1000);
   }
@@ -68,11 +66,13 @@ function compareCards() {
   if (guessOne === guessTwo) {
     $(".guessed").removeClass("guessed");
   }
-  //If the are not the same, they get flipped face down after 1 second, and the class "guessed" is removed
+  //If they are not the same, they get flipped face down after 1 second, and the class "guessed" is removed
   else if (guessOne !== guessTwo) {
     setTimeout(function () {
     $(".guessed").addClass("back").removeClass("front guessed")}, 1000);
-  } //ERICA: Try flipping the order here--just an if, pulling removeClass guessed out of id statements
+  } //ERICA: Try flipping the order here--just an if, pulling removeClass guessed out of id statements ALSO: Do you need the second timeout??
+  clickCount = 0;
+  //console.log(clickCount);
 }
 
 //The reset function makes the game active is triggered when the page loads & when the user clicks the new game button.
