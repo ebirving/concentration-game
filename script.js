@@ -24,7 +24,7 @@ function resetGame() {
   clickCount = 0;
   //console.log(clickCount)
   //The cards get flipped back over and all guesses cleared.
-  $(".card").removeClass("front guessed").addClass("back")
+  $(".front").removeClass("front guessed").addClass("back")
   //The images are cleared and reshuffled
   $(".back").on("click", flipCard);
   $(".card img").remove();
@@ -78,4 +78,4 @@ function compareCards() {
 $(window).on("load", resetGame)
 $("#new_game").on("click", resetGame)
 //Unless this listener is turned off within a function, clicking the back of a card triggers the flipCard function.
-$(".back").on("click", flipCard);
+//$(".back").on("click", flipCard);
