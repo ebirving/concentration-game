@@ -22,7 +22,7 @@ var spaceIcons = [
 function resetGame() {
   //The click counter is established at 0...
   clickCount = 0;
-  console.log(clickCount)
+  //console.log(clickCount)
   //The cards get flipped back over and all guesses cleared.
   $(".card").removeClass("front guessed").addClass("back")
   //The images are cleared and reshuffled
