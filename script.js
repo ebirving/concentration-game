@@ -19,6 +19,7 @@ var spaceIcons = [
 var clickCount = 0;
 
 function resetGame() {
+  $(".card").on("click", flipCard);
   $(".card").addClass("back").removeClass("front guessed");
   $(".card img").remove();
   shuffleDeck(spaceIcons);
