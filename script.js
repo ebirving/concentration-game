@@ -19,10 +19,10 @@ var spaceIcons = [
 var clickCount = 0;
 
 function resetGame() {
-  $(".card").on("click", flipCard);
   $(".card").addClass("back").removeClass("front guessed");
   $(".card img").remove();
   shuffleDeck(spaceIcons);
+  $(".back").on("click", flipCard);
 }
 
 function shuffleDeck(deck) {
@@ -64,4 +64,3 @@ function compareCards() {
 
 $(window).on("load", resetGame)
 $("#new_game").on("click", resetGame)
-$(".back").on("click", flipCard)
