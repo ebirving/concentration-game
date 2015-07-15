@@ -68,7 +68,7 @@ function compareCards() {
   else if (guessOne !== guessTwo) {
     setTimeout(function () {
     $(".guessed").addClass("back").removeClass("front guessed")}, 1000);
-  } //ERICA: Try flipping the order here--just an if, pulling removeClass guessed out of id statements ALSO: Do you need the second timeout??
+  } //ERICA: Try flipping the order here--just an if, pulling removeClass "guessed" out of id statements ALSO: Do you need the second timeout??
   clickCount = 0;
   //console.log(clickCount);
 }
