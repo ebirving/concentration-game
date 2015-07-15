@@ -26,6 +26,7 @@ function resetGame() {
   //The cards get flipped back over and all guesses cleared.
   $(".card").removeClass("front guessed").addClass("back")
   //The images are cleared and reshuffled
+  $(".back").on("click", flipCard);
   $(".card img").remove();
   shuffleDeck(spaceIcons);
 }
