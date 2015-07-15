@@ -26,3 +26,4 @@ I would like to experiment with...
 - Giving the user more decks/themes among which to choose
 - Finessing the timing to optimize user experience
 - Responsive design
+- Adding messages to the user on the progress of the game
