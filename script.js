@@ -22,11 +22,9 @@ var spaceIcons = [
 function resetGame() {
   //The click counter is established at 0...
   clickCount = 0;
-  //console.log(clickCount)
-  //The cards get flipped back over and all guesses cleared
-  $(".card").addClass("back").removeClass("front guessed");
-  //The card backs get an event listener that triggers the flipCard function
-  $(".back").on("click", flipCard);
+  console.log(clickCount)
+  //The cards get flipped back over and all guesses cleared.
+  $(".card").removeClass("front guessed").addClass("back")
   //The images are cleared and reshuffled
   $(".card img").remove();
   shuffleDeck(spaceIcons);
@@ -48,13 +46,13 @@ function flipCard() {
   //The card's front is shown, it is given the class "guessed", and the counter advances. The event listener on just that card is turned off.
   $(this).removeClass("back").addClass("front guessed").off("click", flipCard);
   clickCount++;
-  //console.log(clickCount);
+  console.log(clickCount);
   //Once two cards have been flipped, everything is made unclickable for 1s while the compareCards function runs, to avoid comparing more than two cards at a time
   if(clickCount === 2) {
     $(".card").off("click", flipCard);
     compareCards();
     setTimeout(function (){
-      $(".back").on("click", flipCard)}, 1000);
+      $(".back").on("click", flipCard)}, 1000);//ERICA: move this to compareCards?
   }
 }
 
@@ -78,3 +76,5 @@ function compareCards() {
 //The reset function makes the game active is triggered when the page loads & when the user clicks the new game button.
 $(window).on("load", resetGame)
 $("#new_game").on("click", resetGame)
+//Unless this listener is turned off within a function, clicking the back of a card triggers the flipCard function.
+$(".back").on("click", flipCard);
