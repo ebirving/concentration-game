@@ -9,7 +9,21 @@
 - [x] As a user, I want to be able to start a new game without refreshing the page, for convenience.
 
 ##Technologies Used
+- jQuery
+- JavaScript
+- HTML
+- CSS
 
 ##Approach
+I chose the concentration option because I wanted an opportunity to practice creating and manipulating a DOM with a lot of positioned elements. To that end, my first order of business was to tackle the layout in HTML and CSS. Once those elements were stable, I layered on the styling to create a space theme. 
+In deciding what the user would be matching, I considered more educational approaches (i.e. vocabulary practice), but I felt that the topics for which I was interested in creating mnemonic tools were more suited to the more user-directed format of flash cards. I decided that the value for this game should lie in the user's experience of gameplay, rather than in its content. I 
 
-##Next Steps/Unsolved Problems
+##Unsolved Problems
+Though I took great strides in streamlining my code over the course of the project, there are still a few places where it could be DRYer. In particular, the relationship between the flipCard and compareCards functions could be clearer, and the if/else statements inside compareCards could probably be condensed further.
+
+##Next Steps
+I would like to experiment with...
+- Animating the card-flip
+- Manipulating/ the SVG icons
+- Giving the user more decks/themes among which to choose
+- Finessing the timing to optimize user experience
