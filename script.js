@@ -20,6 +20,7 @@ var spaceIcons = [
 
 //When the game is reset...
 function resetGame() {
+  // i think this is really elegent how you reset the game
   //The click counter is established at 0...
   clickCount = 0;
   //console.log(clickCount)
@@ -50,10 +51,12 @@ function flipCard() {
   console.log(clickCount);
   //Once two cards have been flipped, everything is made unclickable for 1s while the compareCards function runs, to avoid comparing more than two cards at a time
   if(clickCount === 2) {
+    // awesome! this is super slick. I didn't really see this sort of functionality in many other memory games, the notion of making something unclickable after getting a match
     $(".card").off("click", flipCard);
     compareCards();
     setTimeout(function (){
       $(".back").on("click", flipCard)}, 1000);//ERICA: move this to compareCards?
+      // i think so, it depends. Currently you have to wait 1 second after a correct guess as well as an incorrect guess, maybe you wanted that
   }
 }
 
